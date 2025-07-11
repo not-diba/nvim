@@ -51,9 +51,9 @@ return {
     opts = function(_, opts)
       opts.spec = opts.spec or {}
       vim.list_extend(opts.spec, {
-        { "<leader>F", group = "Flutter" },
-        { "<leader>Fc", "<cmd>Telescope flutter commands<cr>", desc = " Commands" },
-        { "<leader>Fv", "<cmd>Telescope flutter fvm<cr>", desc = "󰜎 FVM" },
+        { "<leader>F", group = "Flutter", icon = "" },
+        { "<leader>Fc", "<cmd>Telescope flutter commands<cr>", desc = " Commands" },
+        { "<leader>Fv", "<cmd>Telescope flutter fvm<cr>", desc = " FVM" },
       })
     end,
   },

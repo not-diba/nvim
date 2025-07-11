@@ -17,23 +17,44 @@ return {
     "hrsh7th/nvim-cmp",
     lazy = false,
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp", -- Required for LSP completion
-      "hrsh7th/cmp-buffer", -- Completion from buffer
-      "hrsh7th/cmp-path", -- Completion for file paths
-      "L3MON4D3/LuaSnip", -- Snippet engine
-      "saadparwaiz1/cmp_luasnip", -- Snippet completions
-      "hrsh7th/cmp-emoji", -- You already had this
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-emoji",
+
+      -- ✅ Copilot integration
+      {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+          require("copilot").setup({
+            suggestion = { enabled = false },
+            panel = { enabled = false },
+          })
+        end,
+      },
+      {
+        "zbirenbaum/copilot-cmp",
+        dependencies = { "zbirenbaum/copilot.lua" },
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+      },
     },
     opts = function(_, opts)
-      -- Add additional sources
+      -- ✅ Insert Copilot as highest-priority source
       opts.sources = vim.tbl_extend("force", opts.sources or {}, {
+        { name = "copilot" },
         { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "path" },
         { name = "luasnip" },
         { name = "emoji" },
       })
-      -- Snippet support
+
       opts.snippet = {
         expand = function(args)
           require("luasnip").lsp_expand(args.body)
