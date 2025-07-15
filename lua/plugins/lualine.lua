@@ -53,12 +53,12 @@ return {
           },
           {
             "branch",
-            separator = { right = "" },
+            separator = { right = "" },
             right_padding = 1,
           },
           {
             "diff",
-            separator = { right = "" },
+            separator = { right = "" },
             right_padding = 1,
           },
           {
@@ -72,7 +72,7 @@ return {
         lualine_x = {},
         lualine_y = {
           { "filetype", separator = { left = "", right = "" } },
-          { "progress", separator = { left = "", right = "" } },
+          { "progress", separator = { left = "", right = "" } },
         },
         lualine_z = {
           { "location", separator = { left = "", right = "" }, left_padding = 2 },
