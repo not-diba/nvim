@@ -48,7 +48,7 @@ return {
         lualine_b = {
           {
             "filename",
-            separator = { left = "" },
+            separator = { left = "", right = "" },
             right_padding = 1,
           },
           {
