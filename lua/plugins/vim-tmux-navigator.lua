@@ -15,11 +15,11 @@ return {
     end
 
     return {
-      { "<C-h>", "<cmd><C-U>TmuxNavigateLeft<cr>", desc = "Tmux Left" },
-      { "<C-j>", "<cmd><C-U>TmuxNavigateDown<cr>", desc = "Tmux Down" },
-      { "<C-k>", "<cmd><C-U>TmuxNavigateUp<cr>", desc = "Tmux Up" },
-      { "<C-l>", "<cmd><C-U>TmuxNavigateRight<cr>", desc = "Tmux Right" },
-      { "<C-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>", desc = "Tmux Previous" },
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Tmux Left" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>", desc = "Tmux Down" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>", desc = "Tmux Up" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>", desc = "Tmux Right" },
+      { "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", desc = "Tmux Previous" },
     }
   end,
 }

@@ -20,6 +20,7 @@ return {
       "dart",
       "go",
       "java",
+      "ruby",
     },
   },
 }
