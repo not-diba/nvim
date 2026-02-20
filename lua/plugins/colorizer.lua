@@ -17,7 +17,6 @@ return {
       "javascriptreact",
       "css",
       "html",
-      "dart",
       "go",
       "java",
       "ruby",
