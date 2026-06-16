@@ -27,7 +27,7 @@ return {
         comments = "italic",
         keywords = "italic",
         constants = "NONE",
-        functions = "italic",
+        functions = "NONE",
         operators = "NONE",
         variables = "NONE",
         parameters = "NONE",
