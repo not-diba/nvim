@@ -3,13 +3,13 @@ return {
   event = "VeryLazy",
   opts = function()
     local colors = {
-      blue = "#80a0ff",
-      cyan = "#79dac8",
-      black = "#080808",
-      white = "#c6c6c6",
-      red = "#ff5189",
-      violet = "#d183e8",
-      grey = "#303030",
+      blue = "#A3A9CE",
+      cyan = "#89B3B6",
+      black = "#292522",
+      white = "#C1A78E",
+      red = "#D47766",
+      violet = "#CF9BC2",
+      grey = "#34302C",
     }
 
     local bubbles_theme = {
@@ -38,44 +38,50 @@ return {
       options = {
         theme = bubbles_theme,
         component_separators = { left = "", right = "|" },
-        section_separators = { left = "", right = "" },
+        section_separators = { left = "◥", right = "◣" },
         disabled_filetypes = {},
       },
       sections = {
         lualine_a = {
-          { "mode", separator = { left = "", right = "" }, right_padding = 2 },
+          { "mode", separator = { right = "◣" }, right_padding = 2 },
         },
         lualine_b = {
           {
             "filename",
-            separator = { left = "", right = "" },
+            separator = { left = "◥", right = "◣" },
             right_padding = 1,
           },
           {
             "branch",
-            separator = { right = "" },
+            separator = { right = "◣" },
             right_padding = 1,
           },
           {
             "diff",
-            separator = { right = "" },
+            separator = { right = "◣" },
             right_padding = 1,
           },
           {
             "diagnostics",
             symbols = { error = " ", warn = " ", info = " ", hint = " " },
-            separator = { right = "" },
+            separator = { right = "◣" },
             right_padding = 1,
           },
         },
         lualine_c = {}, -- keep middle pure black
         lualine_x = {},
         lualine_y = {
-          { "filetype", separator = { left = "", right = "" } },
-          { "progress", separator = { left = "", right = "" } },
+          { "filetype", separator = { left = "◥", right = "◣" } },
+          { "progress", separator = { left = "◥", right = "" } },
         },
         lualine_z = {
-          { "location", separator = { left = "", right = "" }, left_padding = 2 },
+          {
+            "location",
+            color = { fg = colors.black, bg = colors.red },
+            separator = { left = "◥", right = "" },
+            left_padding = 2,
+            right_padding = 0,
+          },
         },
       },
       inactive_sections = {
@@ -95,7 +101,7 @@ return {
 
     -- Force white separators globally (optional tweak)
     vim.cmd([[
-      hi LualineSeparator guifg=#c6c6c6
+      hi LualineSeparator guifg=#C1A78E
     ]])
   end,
 }

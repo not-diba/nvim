@@ -5,16 +5,12 @@ return {
   dependencies = { "amansingh-afk/milli.nvim" },
   config = function()
     local ascii_images = {
-      "cactus",
       "blackhole",
-      "badge",
-      "chrome",
-      "finger",
-      "flyingdragon",
-      "lighningtornado",
-      "robot",
-      "shadertwo",
-      "spinner",
+      -- "finger",
+      -- "lighningtornado",
+      --"robot",
+      -- "shadertwo",
+      -- "spinner",
     }
     math.randomseed(os.time())
     local chosen = ascii_images[math.random(#ascii_images)]

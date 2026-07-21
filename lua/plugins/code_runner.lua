@@ -17,8 +17,8 @@ return {
             "java $fileNameWithoutExt",
           },
           python = "python3 -u",
-          typescript = "bun run",
-          javascript = "bun run",
+          typescript = "npm run",
+          javascript = "npm run",
           go = "go run .",
           rust = "cargo run",
           cpp = {

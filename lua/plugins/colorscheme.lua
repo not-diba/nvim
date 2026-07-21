@@ -2,21 +2,12 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "melange",
     },
   },
 
   {
-    "catppuccin/nvim",
-    enabled = false,
-  },
-  {
-    "folke/tokyonight.nvim",
-    enabled = false,
-  },
-
-  {
-    "olimorris/onedarkpro.nvim",
+    "savq/melange-nvim",
     priority = 1000,
     opts = {
       styles = {
