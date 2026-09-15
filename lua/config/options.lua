@@ -7,3 +7,14 @@ vim.opt.wrap = true -- Wrap lines instead of scrolling horizontally
 vim.opt.linebreak = true -- Wrap at word boundaries (don't break mid-word)
 vim.opt.breakindent = true -- Preserve indentation on wrapped lines
 vim.opt.showbreak = "↪ "
+vim.ui.select = function(...)
+  require("snacks").picker.select(...)
+end
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.ui.select = function(...)
+      require("snacks").picker.select(...)
+    end
+  end,
+})
